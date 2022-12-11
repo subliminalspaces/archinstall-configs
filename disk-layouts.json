@@ -1,0 +1,36 @@
+{
+	"/dev/first_disk":{
+		"partitions":[{
+			
+			"boot":false,
+			"encrypted":false,
+			"filesystem":{
+				"format":"fat32"
+			},
+			"wipe":false,
+			"mountpoint":"/boot",	
+			"size":"513MB",
+			"start":"5MB",
+			"type:":"primary"
+			},{
+			"boot":false,
+			"encrypted":false,
+			"filesystem":"btrfs",
+			"btrfs":{
+				"subvolumes":{
+					"@snapshots":"/.snapshots",
+					"@home":"/home",
+					"@log":"/var/log",
+					"@pkgs":"/var/cache/pacman/pkg"
+				}
+			},
+			"wipe":false,
+			"mountpoint":"/",
+			"size":"100%",
+			"start":518MB",
+			"type":"primary"
+			}
+		]
+
+	}
+}
